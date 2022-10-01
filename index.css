@@ -1,0 +1,142 @@
+body,
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+p {
+    margin: 0;
+}
+
+.container {
+    border: 7px solid black;
+    border-radius: 15px;
+    min-height: 100vh;
+    max-height: 100vh;
+    height: 100%;
+    max-width: 420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0 auto;
+    padding: .25em;
+}
+
+.header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+}
+
+.header img {
+    height: 30px;
+}
+
+#dog {
+    position: relative;
+}
+
+#dog img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.dog-info {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: white;
+}
+
+.dog-info p {
+    margin-top: 5px;
+    font-size: 24px;
+    color: #B7B7B7;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    padding: 1.5em;
+}
+
+.buttons button {
+    border-radius: 50%;
+    padding: 1em;
+    border: none;
+    background: white;
+    transition: background-color 500ms;
+    box-shadow: 0px 10px 20px #E9E9EA;
+    outline: none;
+}
+
+#accept-btn:hover {
+    background: #DBFFF4;
+}
+
+#reject-btn:hover {
+    background: #FFE7EF;
+}
+
+.main-content {
+    position: relative;
+}
+
+.like,
+.nope {
+    position: absolute;
+    transform: rotate(-30deg);
+    width: 40%;
+    z-index: 5;
+    left: 10px;
+    top: 50px;
+    opacity: 0;
+}
+
+.show {
+    transition: opacity 500ms;
+    opacity: 1;
+}
+
+@media (max-height: 700px) {
+    .buttons {
+        gap: 2em;
+    }
+
+    .buttons img {
+        height: 25px;
+    }
+
+    .buttons button {
+        padding: .75em;
+        box-shadow: 0px 10px 10px #E9E9EA;
+    }
+
+    #dog img {
+        height: 400px;
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media (max-height: 570px) {
+    #dog img {
+        height: 300px;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .container {
+        min-height: 450px;
+        min-height: 100vh;
+    }
+}
